@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body ng-controller="PopupController">
+
+    <canvas id="c" class="canvas" width="500" height="500"></canvas>
+
+    <button class="clear-button" ng-click="clear()">Clear</button>
+
+    <button class="draw-mode" ng-click="changeDrawMode()" ng-class="{active: canvas.isDrawingMode}">Draw Mode</button>
+
+    <color-picker choose-color="chooseColor(color)" choose-width="chooseWidth(width)"></color-picker>
+
+    <button class="text-button" ng-click="addText()">Text</button>
+
+    <button class="image-button" ng-click="addImage()">Image</button>
+
+    <script src="vendors/angular/angular.min.js"></script>
+    <script src="vendors/fabric/dist/fabric.min.js"></script>
+    <script src="vendors/javascript-detect-element-resize/detect-element-resize.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
